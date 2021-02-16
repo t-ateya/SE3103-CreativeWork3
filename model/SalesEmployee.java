@@ -9,6 +9,7 @@ public class SalesEmployee extends Employee {
 		super(firstName, lastName, id);
 		setSales(sales);
 		setCommission(commission);
+		totSalesSalary = commission*sales;
 
 	}
 
@@ -36,8 +37,7 @@ public class SalesEmployee extends Employee {
 
 	@Override
 	public double totalSalary() {
-		totSalesSalary = commission*sales;
-		return totSalesSalary;
+		return getTotSalesSalary();
 	}
 public double getTotSalesSalary() {
 	return totSalesSalary;
@@ -47,7 +47,7 @@ public double getTotSalesSalary() {
 		+ "sales $: %.2f\n"
 		+ "commission: %.2f\n"
 		+ "Total Sales Salary $: %.2f\n"
-		, super.toString(),sales, commission, totalSalary());
+		, super.toString(),sales, commission, totSalesSalary);
 	}
 
 }

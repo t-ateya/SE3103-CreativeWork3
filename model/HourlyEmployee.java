@@ -11,6 +11,8 @@ public class HourlyEmployee extends SalesEmployee {
 		super(firstName, lastName, id, sales, commission);
 		this.numberOfHoursWorkedPerWeek = numberOfHoursWorkedPerWeek;
 
+		totHourlySalary = HOURLY_RATE*numberOfHoursWorkedPerWeek;
+
 	}
 
 	public double getNumberOfHoursWorkedPerWeek() {
@@ -28,7 +30,7 @@ public class HourlyEmployee extends SalesEmployee {
 
 	@Override
 	public double totalSalary() {
-		totHourlySalary = HOURLY_RATE*numberOfHoursWorkedPerWeek;
+		
 		return super.totalSalary() + totHourlySalary;
 	}
 

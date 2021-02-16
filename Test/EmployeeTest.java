@@ -12,10 +12,10 @@ public class EmployeeTest {
 		//System.out.println(e1.toString());
 
 		HourlyEmployee h1 = new HourlyEmployee("Mohammed", "Ali", "4321", 3000, 0.04, 20.0);
-		//System.out.println(h1.toString());
+		System.out.println(h1.toString());
 
 		SalesEmployee s1 = new SalesEmployee("Paul", "Rock", "4567", 3000, 0.04);
-		System.out.println(s1.toString());
+		//System.out.println(s1.toString());
 	}
 	
 }
