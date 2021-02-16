@@ -4,14 +4,16 @@ public class SalariedEmployee extends Employee {
 
 	private double baseSalary;
 	private static final double BONUS_RATE = 0.05;
-	private double bonus = BONUS_RATE * baseSalary;
+	private double bonus;
 
-	public SalariedEmployee(String firstName, String lastName, String id, double bonus) {
+	public SalariedEmployee(String firstName, String lastName, String id, double baseSalary) {
 		super(firstName, lastName, id);
-		this.bonus = bonus;
+		this.baseSalary = baseSalary;
+		this.bonus = BONUS_RATE*baseSalary;
 
 	}
 
+	
 	public double getBaseSalary() {
 
 		return baseSalary;
@@ -39,7 +41,8 @@ public class SalariedEmployee extends Employee {
 	@Override
 	public String toString(){
 		return String.format("Salaried and %s\n"
-		+ "base Salary: %.2f", super.toString(), baseSalary);
+		+ "base Salary : %.2f\n" +"Bonus: %.2f\n"+ 
+		"Total Salary : %.2f\n", super.toString(), baseSalary, getBonus(), totalSalary());
 	}
 
 }

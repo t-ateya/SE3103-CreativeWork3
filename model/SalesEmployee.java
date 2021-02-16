@@ -3,6 +3,7 @@ package model;
 public class SalesEmployee extends Employee {
 	private double sales;
 	private double commission;
+	private double totSalesSalary;
 
 	public SalesEmployee(String firstName, String lastName, String id, double sales, double commission) {
 		super(firstName, lastName, id);
@@ -35,13 +36,18 @@ public class SalesEmployee extends Employee {
 
 	@Override
 	public double totalSalary() {
-		return commission*sales;
+		totSalesSalary = commission*sales;
+		return totSalesSalary;
 	}
-
+public double getTotSalesSalary() {
+	return totSalesSalary;
+}
 	public String toString(){
 		return String.format("sales employee: %s\n"
-		+ "sales: %.2f"
-		+ "commission: %.2f", super.toString(), sales, commission);
+		+ "sales $: %.2f\n"
+		+ "commission: %.2f\n"
+		+ "Total Sales Salary $: %.2f\n"
+		, super.toString(),sales, commission, totalSalary());
 	}
 
 }
