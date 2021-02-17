@@ -8,7 +8,7 @@ public class Main {
 
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setLocation(400, 200);
-		window.setTitle("EMPLOYEE HIRING");
+		window.setTitle("EMPLOYEE HIRING SYSTEM");
 
 		var menu = new MenuScreen(window);
 		menu.init();
