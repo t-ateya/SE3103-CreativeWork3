@@ -28,7 +28,7 @@ public class MenuScreen {
 
 		employeeButton.addActionListener(event->{
 			window.getContentPane().removeAll();
-			var panel = new EmployeePanel(window);
+			var panel = new EmpoyeePanel(window);
 			panel.init();
 			window.pack();
 			window.revalidate();
