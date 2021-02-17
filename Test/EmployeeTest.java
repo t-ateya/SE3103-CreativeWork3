@@ -3,6 +3,7 @@ package Test;
 import java.util.ArrayList;
 
 import model.Employee;
+import model.EmployeeDB;
 import model.HourlyEmployee;
 import model.SalariedEmployee;
 import model.SalesEmployee;
@@ -24,9 +25,17 @@ public class EmployeeTest {
 		employees.add(h1);
 		employees.add(s1);
 
-		for (var e: employees){
+		/*for (var e: employees){
 			System.out.println(e);
+		}*/
+		
+		EmployeeDB database = new EmployeeDB();
+		for (var db: database.getHourlyemployee()) {
+			System.out.println(db);
 		}
+		
+
+
 
 	}
 	
