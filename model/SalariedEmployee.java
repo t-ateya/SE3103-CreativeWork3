@@ -41,8 +41,8 @@ public class SalariedEmployee extends Employee {
 	@Override
 	public String toString(){
 		return String.format("Salaried and %s\n"
-		+ "base Salary : %.2f\n" +"Bonus: %.2f\n"+ 
-		"Total Salary : %.2f\n", super.toString(), baseSalary, getBonus(), totalSalary());
+		+ "base Salary : %.2f\n" +"Bonus $: %.2f\n"+ 
+		"Total Salary $: %.2f\n", super.toString(), baseSalary, getBonus(), totalSalary());
 	}
 
 }

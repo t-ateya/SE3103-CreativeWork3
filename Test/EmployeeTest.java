@@ -1,5 +1,7 @@
 package Test;
 
+import java.util.ArrayList;
+
 import model.Employee;
 import model.HourlyEmployee;
 import model.SalariedEmployee;
@@ -12,10 +14,20 @@ public class EmployeeTest {
 		//System.out.println(e1.toString());
 
 		HourlyEmployee h1 = new HourlyEmployee("Mohammed", "Ali", "4321", 3000, 0.04, 20.0);
-		System.out.println(h1.toString());
+		//System.out.println(h1.toString());
 
 		SalesEmployee s1 = new SalesEmployee("Paul", "Rock", "4567", 3000, 0.04);
 		//System.out.println(s1.toString());
+
+		ArrayList<Employee>employees = new ArrayList<>();
+		employees.add(e1);
+		employees.add(h1);
+		employees.add(s1);
+
+		for (var e: employees){
+			System.out.println(e);
+		}
+
 	}
 	
 }
