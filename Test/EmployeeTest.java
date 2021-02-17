@@ -30,7 +30,7 @@ public class EmployeeTest {
 		}*/
 		
 		EmployeeDB database = new EmployeeDB();
-		for (var db: database.getHourlyemployee()) {
+		for (var db: database.getAllemployees()) {
 			System.out.println(db);
 		}
 		
