@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -24,6 +25,7 @@ public class EmpoyeePanel {
 	private JButton delEmpButton = new JButton("Delete Employeee");
 	private JTextArea addEmpNameArea = new JTextArea();
 	private JTextField addEmpIDField = new JTextField(5);
+	private JScrollPane jpane = new JScrollPane();
 	// private JTextArea delEmpNameArea = new JTextArea();
 	private JTextField delEmpIDField = new JTextField(5);
 
@@ -41,7 +43,11 @@ public class EmpoyeePanel {
 
 		JPanel south1 = new JPanel();
 		south1.add(new JLabel("INPUT EMPLOYEE NAME TO ADD: "));
-		south1.add(addEmpNameArea);
+		addEmpNameArea.setColumns(20);
+		addEmpNameArea.setRows(5);
+		jpane.setViewportView(addEmpNameArea);
+		south1.add(jpane);
+
 		south1.add(new JLabel("INPUT EMLOYEE ID TO ADD: "));
 		south1.add(addEmpIDField);
 		south1.add(new JLabel("INPUT ID TO DELETE EMPLOYEE: "));
@@ -56,7 +62,7 @@ public class EmpoyeePanel {
 
 		// crate employee canvas
 		empCanvas = new EmployeeCanvas(this);
-		//empCanvas.removeAll();
+		empCanvas.removeAll();
 		cp.add(BorderLayout.CENTER, empCanvas);
 
 		EmployeeEventListener listener = new EmployeeEventListener(this);
