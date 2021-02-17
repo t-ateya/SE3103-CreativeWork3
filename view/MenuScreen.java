@@ -19,10 +19,10 @@ public class MenuScreen {
 		Container cp = window.getContentPane();
 
 		JPanel menuPanel = new JPanel();
-		//menuPanel.setLayout(new GridLayout(2, 1));
-		menuPanel.setPreferredSize(new Dimension(400, 200));
+		menuPanel.setLayout(new GridLayout(2, 1));
+		menuPanel.setPreferredSize(new Dimension(500, 500));
 
-		JButton employeeButton = new JButton();
+		JButton employeeButton = new JButton("EMPLOYEE HIRING SYSTEM");
 		menuPanel.add(employeeButton);
 		cp.add(BorderLayout.CENTER, menuPanel);
 
@@ -31,7 +31,7 @@ public class MenuScreen {
 			var panel = new EmpoyeePanel(window);
 			panel.init();
 			window.pack();
-			window.revalidate();
+			window.setVisible(true);
 
 		});
 		
