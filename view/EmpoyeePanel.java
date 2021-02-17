@@ -56,7 +56,7 @@ public class EmpoyeePanel {
 
 		// crate employee canvas
 		empCanvas = new EmployeeCanvas(this);
-		empCanvas.removeAll();
+		//empCanvas.removeAll();
 		cp.add(BorderLayout.CENTER, empCanvas);
 
 		EmployeeEventListener listener = new EmployeeEventListener(this);

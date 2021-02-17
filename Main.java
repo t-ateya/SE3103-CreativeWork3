@@ -7,7 +7,7 @@ public class Main {
 		JFrame window = new JFrame();
 
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		window.setLocation(400, 100);
+		window.setLocation(400, 200);
 		window.setTitle("EMPLOYEE VOUCHER SYSTEM");
 
 		var menu = new MenuScreen(window);

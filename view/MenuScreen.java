@@ -20,7 +20,7 @@ public class MenuScreen {
 
 		JPanel menuPanel = new JPanel();
 		//menuPanel.setLayout(new GridLayout(2, 1));
-		menuPanel.setPreferredSize(new Dimension(500, 500));
+		menuPanel.setPreferredSize(new Dimension(400, 200));
 
 		JButton employeeButton = new JButton();
 		menuPanel.add(employeeButton);
