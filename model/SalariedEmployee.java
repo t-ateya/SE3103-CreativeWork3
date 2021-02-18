@@ -13,23 +13,22 @@ public class SalariedEmployee extends Employee {
 	public SalariedEmployee(String firstName, String lastName, String id, double baseSalary) {
 		super(firstName, lastName, id);
 		this.baseSalary = baseSalary;
-		this.bonus = BONUS_RATE*baseSalary;
+		this.bonus = BONUS_RATE * baseSalary;
 
 	}
 
-	
 	public double getBaseSalary() {
 
 		return baseSalary;
 	}
 
 	public void setBaseSalary(double baseSalary) {
-		if (baseSalary >= 0.0 ){
+		if (baseSalary >= 0.0) {
 			this.baseSalary = baseSalary;
 		} else {
 			throw new IllegalArgumentException("Salary must be greater than 0");
 		}
-		
+
 	}
 
 	public double getBonus() {
@@ -43,20 +42,17 @@ public class SalariedEmployee extends Employee {
 	}
 
 	@Override
-	public String toString(){
-		return String.format("Salaried and %s\n"
-		+ "base Salary : %.2f\n" +"Bonus $: %.2f\n"+ 
-		"Total Salary $: %.2f\n", super.toString(), baseSalary, getBonus(), totalSalary());
+	public String toString() {
+		return String.format(
+				"Salaried and %s\n" + "base Salary : %.2f\n" + "Bonus $: %.2f\n" + "Total Salary $: %.2f\n",
+				super.toString(), baseSalary, getBonus(), totalSalary());
 	}
 
 	@Override
-	public void render(Graphics2D g2){
+	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 16));
-		g2.drawString(
-			"Employee Name: " + getFirstName() + " "
-			+ getLastName() + ", \n"
-			+ "\tID: " + getId(), 50, 100);
+		g2.drawString(toString(), 50, 100);
 	}
 
 }

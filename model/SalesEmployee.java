@@ -1,4 +1,5 @@
 package model;
+
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -12,7 +13,7 @@ public class SalesEmployee extends Employee {
 		super(firstName, lastName, id);
 		setSales(sales);
 		setCommission(commission);
-		totSalesSalary = commission*sales;
+		totSalesSalary = commission * sales;
 
 	}
 
@@ -21,17 +22,19 @@ public class SalesEmployee extends Employee {
 	}
 
 	public void setCommission(double rate) {
-		if ((rate >=0.01) && (rate < 1.0)){
+		if ((rate >= 0.01) && (rate < 1.0)) {
 			this.commission = rate;
-		} else throw new IllegalArgumentException("Commission must be in the interval in the interval [0.0, 1.0]");
-		
+		} else
+			throw new IllegalArgumentException("Commission must be in the interval in the interval [0.0, 1.0]");
+
 	}
 
 	public void setSales(double sales) {
-		if (sales >= 0.0){
+		if (sales >= 0.0) {
 			this.sales = sales;
-		}else throw new IllegalArgumentException("sales must be greater than 0.0");
-		
+		} else
+			throw new IllegalArgumentException("sales must be greater than 0.0");
+
 	}
 
 	public double getSales() {
@@ -42,24 +45,21 @@ public class SalesEmployee extends Employee {
 	public double totalSalary() {
 		return getTotSalesSalary();
 	}
-public double getTotSalesSalary() {
-	return totSalesSalary;
-}
-	public String toString(){
-		return String.format("sales employee: %s\n"
-		+ "sales $: %.2f\n"
-		+ "commission: %.2f\n"
-		+ "Total Sales Salary $: %.2f\n"
-		, super.toString(),sales, commission, totSalesSalary);
+
+	public double getTotSalesSalary() {
+		return totSalesSalary;
 	}
 
-	public void render(Graphics2D g2){
+	public String toString() {
+		return String.format(
+				"sales employee: %s\n" + "sales $: %.2f\n" + "commission: %.2f\n" + "Total Sales Salary $: %.2f\n",
+				super.toString(), sales, commission, totSalesSalary);
+	}
+
+	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 16));
-		g2.drawString(
-			"Employee Name: " + getFirstName() + " "  
-			 + getLastName() + ", \n"
-			+ "\tID: " + getId(), 50, 100);
+		g2.drawString(toString(), 50, 100);
 	}
 
 }

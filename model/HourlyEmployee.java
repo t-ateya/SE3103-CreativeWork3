@@ -1,4 +1,5 @@
 package model;
+
 import java.awt.Graphics2D;
 import java.awt.Color;
 import java.awt.Font;
@@ -14,7 +15,7 @@ public class HourlyEmployee extends SalesEmployee {
 		super(firstName, lastName, id, sales, commission);
 		this.numberOfHoursWorkedPerWeek = numberOfHoursWorkedPerWeek;
 
-		totHourlySalary = HOURLY_RATE*numberOfHoursWorkedPerWeek;
+		totHourlySalary = HOURLY_RATE * numberOfHoursWorkedPerWeek;
 
 	}
 
@@ -23,42 +24,33 @@ public class HourlyEmployee extends SalesEmployee {
 	}
 
 	public void setNumberOfHoursWorkedPerWeek(double numberOfHoursWorkedPerWeek) {
-		if (numberOfHoursWorkedPerWeek >= 0){
+		if (numberOfHoursWorkedPerWeek >= 0) {
 			this.numberOfHoursWorkedPerWeek = numberOfHoursWorkedPerWeek;
-		}else {
+		} else {
 			throw new IllegalArgumentException("Number of hours must be great than 0");
 		}
-		
+
 	}
 
 	@Override
 	public double totalSalary() {
-		
+
 		return super.totalSalary() + totHourlySalary;
 	}
 
 	@Override
-	public String toString(){
-		return String.format("Hourly employee: %s\n"
-		+ "Weekly Hours $: %.2f\n"  
-		+"Hourly Rate $: %.2f\n"
-		+ "Total Hourly Salary $: %.2f\n"
-		+ "Total Salary $: %.2f\n", super.toString(), numberOfHoursWorkedPerWeek,HOURLY_RATE, totHourlySalary, totalSalary());
+	public String toString() {
+		return String.format(
+				"Hourly employee: %s\n" + "Weekly Hours $: %.2f\n" + "Hourly Rate $: %.2f\n"
+						+ "Total Hourly Salary $: %.2f\n" + "Total Salary $: %.2f\n",
+				super.toString(), numberOfHoursWorkedPerWeek, HOURLY_RATE, totHourlySalary, totalSalary());
 	}
 
 	@Override
-	public void render(Graphics2D g2){
+	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 16));
-		g2.drawString(
-			"Employee Name: " + getFirstName() +  " " +
-			 getLastName() + ", \t" 
-			+ "\tID: " + getId(), 50, 100);
+		g2.drawString(toString(), 50, 100);
 	}
-	
-
-
-
-
 
 }
