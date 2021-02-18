@@ -58,8 +58,8 @@ public double getTotSalesSalary() {
 		g2.setFont(new Font("Courier", Font.BOLD, 16));
 		g2.drawString(
 			"Employee First Name: " + getFirstName() + ", \n" + 
-			"\nLast Name: " + getLastName()
-			+ "\nID: " + getId(), 50, 100);
+			"\tLast Name: " + getLastName() + ", \n"
+			+ "\tID: " + getId(), 50, 100);
 	}
 
 }
