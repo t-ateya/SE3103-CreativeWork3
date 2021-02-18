@@ -19,7 +19,7 @@ public class EmployeeEventListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		JButton button = (JButton)e.getSource();
 		if (button == panel.getExitButton()){
-			panel.getWindow().removeAll();
+			panel.getWindow().getContentPane().removeAll();
 			var menu = new MenuScreen(panel.getWindow());
 			menu.init();
 			panel.getWindow().pack();
