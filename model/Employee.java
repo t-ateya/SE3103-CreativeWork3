@@ -40,7 +40,7 @@ public abstract class Employee {
 	}
 
 	public String toString() {
-		return String.format("employee: %s  %s\n" + "id: %s \n", 
+		return String.format("employee: %s  %s\n" + " "+"id: %s \n", 
 		firstName, lastName, id);
 	}
 

@@ -52,7 +52,7 @@ public class SalesEmployee extends Employee {
 
 	public String toString() {
 		return String.format(
-				"sales employee: %s\n" + "sales $: %.2f\n" + "commission: %.2f\n" + "Total Sales Salary $: %.2f\n",
+				"sales employee: %s\n" + "" +  "sales $: %.2f\n" + " "+"commission: %.2f\n" +" "+ "Total Sales Salary $: %.2f\n",
 				super.toString(), sales, commission, totSalesSalary);
 	}
 

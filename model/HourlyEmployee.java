@@ -41,8 +41,8 @@ public class HourlyEmployee extends SalesEmployee {
 	@Override
 	public String toString() {
 		return String.format(
-				"Hourly employee: %s\n" + "Weekly Hours $: %.2f\n" + "Hourly Rate $: %.2f\n"
-						+ "Total Hourly Salary $: %.2f\n" + "Total Salary $: %.2f\n",
+				"Hourly employee: %s\n" +" "+ "Weekly Hours $: %.2f\n" +" " + "Hourly Rate $: %.2f\n"
+						+" "+ "Total Hourly Salary $: %.2f\n" + " " + "Total Salary $: %.2f\n",
 				super.toString(), numberOfHoursWorkedPerWeek, HOURLY_RATE, totHourlySalary, totalSalary());
 	}
 
