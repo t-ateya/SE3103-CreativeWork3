@@ -57,8 +57,8 @@ public double getTotSalesSalary() {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 16));
 		g2.drawString(
-			"Employee First Name: " + getFirstName() + ", \n" + 
-			"\tLast Name: " + getLastName() + ", \n"
+			"Employee Name: " + getFirstName() + " "  
+			 + getLastName() + ", \n"
 			+ "\tID: " + getId(), 50, 100);
 	}
 
