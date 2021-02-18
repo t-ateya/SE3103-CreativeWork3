@@ -1,4 +1,5 @@
 package model;
+import java.awt.Graphics2D;
 
 public abstract class Employee {
 	private String firstName;
@@ -12,6 +13,7 @@ public abstract class Employee {
 	}
 
 	public abstract double totalSalary();
+	public abstract void render(Graphics2D g2);
 
 	public String getFirstName() {
 		return firstName;

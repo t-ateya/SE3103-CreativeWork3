@@ -24,6 +24,8 @@ public class EmployeeEventListener implements ActionListener {
 			menu.init();
 			panel.getWindow().pack();
 			panel.getWindow().revalidate();
+		} else if (button == panel.getViewEmpButton()){
+			
 		}
 
 	}

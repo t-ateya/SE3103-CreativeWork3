@@ -1,5 +1,9 @@
 package model;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics2D;
+
 public class SalariedEmployee extends Employee {
 
 	private double baseSalary;
@@ -43,6 +47,16 @@ public class SalariedEmployee extends Employee {
 		return String.format("Salaried and %s\n"
 		+ "base Salary : %.2f\n" +"Bonus $: %.2f\n"+ 
 		"Total Salary $: %.2f\n", super.toString(), baseSalary, getBonus(), totalSalary());
+	}
+
+	@Override
+	public void render(Graphics2D g2){
+		g2.setColor(Color.red);
+		g2.setFont(new Font("Courier", Font.BOLD, 16));
+		g2.drawString(
+			"Employee First Name: " + getFirstName() + ", \n" + 
+			"\nLast Name: " + getLastName()
+			+ "\nID: " + getId(), 50, 100);
 	}
 
 }

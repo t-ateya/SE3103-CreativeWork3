@@ -1,4 +1,7 @@
 package model;
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.Graphics2D;
 
 public class SalesEmployee extends Employee {
 	private double sales;
@@ -48,6 +51,15 @@ public double getTotSalesSalary() {
 		+ "commission: %.2f\n"
 		+ "Total Sales Salary $: %.2f\n"
 		, super.toString(),sales, commission, totSalesSalary);
+	}
+
+	public void render(Graphics2D g2){
+		g2.setColor(Color.red);
+		g2.setFont(new Font("Courier", Font.BOLD, 16));
+		g2.drawString(
+			"Employee First Name: " + getFirstName() + ", \n" + 
+			"\nLast Name: " + getLastName()
+			+ "\nID: " + getId(), 50, 100);
 	}
 
 }
