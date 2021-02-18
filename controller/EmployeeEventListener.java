@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
+import model.EmployeeDB;
 import view.EmpoyeePanel;
 import view.MenuScreen;
 
@@ -25,7 +26,13 @@ public class EmployeeEventListener implements ActionListener {
 			panel.getWindow().pack();
 			panel.getWindow().revalidate();
 		} else if (button == panel.getViewEmpButton()){
-			
+			int index = panel.getEmpCanvas().getEmpIndex();
+			++index;
+			if (index == EmployeeDB.allEmployees.size()){
+				index = 0;
+			}
+			panel.getEmpCanvas().setEmpIndex(index);
+			panel.getEmpCanvas().repaint();
 		}
 
 	}
