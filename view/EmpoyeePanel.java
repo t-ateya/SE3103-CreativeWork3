@@ -42,13 +42,13 @@ public class EmpoyeePanel {
 		cp.add(BorderLayout.SOUTH, southPanel);
 
 		JPanel south1 = new JPanel();
-		south1.add(new JLabel("INPUT EMPLOYEE NAME TO ADD: "));
+		south1.add(new JLabel("ENTER EMPLOYEE NAME TO DISPLAY INFO: "));
 		addEmpNameArea.setColumns(20);
 		addEmpNameArea.setRows(5);
 		jpane.setViewportView(addEmpNameArea);
 		south1.add(jpane);
 
-		south1.add(new JLabel("INPUT EMLOYEE ID TO ADD: "));
+		south1.add(new JLabel("ENTER EMLOYEE ID TO DISPLAY INFO: "));
 		south1.add(addEmpIDField);
 		south1.add(new JLabel("INPUT ID TO DELETE EMPLOYEE: "));
 		south1.add(delEmpIDField);
