@@ -66,8 +66,10 @@ public class SalesEmployee extends Employee {
 		g2.setFont(new Font("Courier", Font.BOLD, 18));
 		g2.drawString("1. Sales Employee: " +""+super.toString(), 50, 60);
 		g2.drawString("2. Sales $: " + "" +sales, 50, 100);
-		g2.drawString("3. Commission: " + "" +commission*100 + " %", 50, 140);
-		g2.drawString("4. Total Sales Salary $: " + "" +totSalesSalary, 50, 180);
+		g2.drawString(String.format("3. Commission:  %.2f" + "",  commission*100) + " %", 50, 140);
+		//g2.drawString("4. Total Sales Salary $: " + "" +totSalesSalary, 50, 180);
+		g2.drawString(String.format("4. Total Sales Salary $:  %.2f" + "",  totSalesSalary), 50, 180);
+		
 	}
 
 }
