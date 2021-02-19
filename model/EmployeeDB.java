@@ -26,14 +26,14 @@ public class EmployeeDB {
 	}
 
 	static {
-		allEmployees.add(new HourlyEmployee("Keenu", "Reeves", "12316", 5000, 0.2, 20));
-		allEmployees.add(new HourlyEmployee("Nicolas", "Cage", "12317", 5100, 0.3, 21));
-		allEmployees.add(new HourlyEmployee("Hugh", "Jackman", "12318", 5200, 0.4, 22));
-		allEmployees.add(new HourlyEmployee("Edward", "Norton", "12319", 5300, 0.5, 23));
+		allEmployees.add(new HourlyEmployee("Keenu", "Reeves", "12316", 5000, 0.02, 20));
+		allEmployees.add(new HourlyEmployee("Nicolas", "Cage", "12317", 5100, 0.03, 21));
+		allEmployees.add(new HourlyEmployee("Hugh", "Jackman", "12318", 5200, 0.04, 22));
+		allEmployees.add(new HourlyEmployee("Edward", "Norton", "12319", 5300, 0.05, 23));
 		allEmployees.add(new HourlyEmployee("Bruce", "Willis", "12320", 5400, 0.6, 24));
-		allEmployees.add(new HourlyEmployee("Tom", "Hanks", "12321", 5500, 7, 0.25));
-		allEmployees.add(new HourlyEmployee("Charlize", "Theron", "12322", 5600, 0.8, 26));
-		allEmployees.add(new HourlyEmployee("Will", "Smith", "12323", 5700, 0.9, 27));
+		allEmployees.add(new HourlyEmployee("Tom", "Hanks", "12321", 5500, 0.07, 25));
+		allEmployees.add(new HourlyEmployee("Charlize", "Theron", "12322", 5600, 0.08, 26));
+		allEmployees.add(new HourlyEmployee("Will", "Smith", "12323", 5700, 0.09, 27));
 		allEmployees.add(new HourlyEmployee("Sean", "Connery", "12324", 5800, 0.10, 28));
 		allEmployees.add(new HourlyEmployee("Keira", "Knightley", "12325", 5900, 0.11, 29));
 		allEmployees.add(new HourlyEmployee("Vin", "Diesel", "12326", 6000, 0.12, 30));

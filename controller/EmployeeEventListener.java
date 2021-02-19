@@ -28,7 +28,7 @@ public class EmployeeEventListener implements ActionListener {
 		} else if (button == panel.getViewEmpButton()){
 			int index = panel.getEmpCanvas().getEmpIndex();
 			++index;
-			if (index == EmployeeDB.allEmployees.size()){
+			if (index == EmployeeDB.getAllemployees().size()){
 				index = 0;
 			}
 			panel.getEmpCanvas().setEmpIndex(index);
