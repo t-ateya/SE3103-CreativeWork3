@@ -52,7 +52,7 @@ public class SalariedEmployee extends Employee {
 	@Override
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
-		g2.setFont(new Font("Courier", Font.BOLD, 20));
+		g2.setFont(new Font("Courier", Font.BOLD, 18));
 	
 		g2.drawString("1. Salaried Employee: "+""+super.toString(), 50, 60);
 		g2.drawString("2. Base Salary $:  " +  ""  + baseSalary, 50, 100);
