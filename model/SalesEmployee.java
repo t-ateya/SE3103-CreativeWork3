@@ -59,7 +59,10 @@ public class SalesEmployee extends Employee {
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 16));
-		g2.drawString(toString(), 50, 100);
+		int no = 1;
+		for (var e : EmployeeDB.getAllemployees()){
+			g2.drawString(no + ". " + e, 80, no*50+100);
+		}
 	}
 
 }
