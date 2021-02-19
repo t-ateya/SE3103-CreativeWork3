@@ -38,23 +38,27 @@ public class HourlyEmployee extends SalesEmployee {
 		return super.totalSalary() + totHourlySalary;
 	}
 
+	/*
 	@Override
 	public String toString() {
 		return String.format(
-				"Hourly employee: %s\n" +" "+ "Weekly Hours $: %.2f\n" +" " + "Hourly Rate $: %.2f\n"
-						+" "+ "Total Hourly Salary $: %.2f\n" + " " + "Total Salary $: %.2f\n",
+				"Hourly Empl: %s\n" +" "+ "Weekly Hours $: %.2f\n" +" " + "Rate $: %.2f\n"
+						+" "+ "Hourly Salary $: %.2f\n" + " " + "Tot Salary $: %.2f\n",
 				super.toString(), numberOfHoursWorkedPerWeek, HOURLY_RATE, totHourlySalary, totalSalary());
 	}
+	*/
 
 	@Override
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 16));
-		int no = 1;
-		for (var e : EmployeeDB.getAllemployees()){
-			g2.drawString(no + ". " + e, 80, no*50+100);
-		}
 		
+		g2.drawString("1. Hourly Employee: "+ "" +super.toString(), 50, 100);
+		g2.drawString("2. Weekly Hours: "+ ""+ numberOfHoursWorkedPerWeek, 50, 100);
+		g2.drawString("3. Hourly Rate: "+ ""+ HOURLY_RATE, 50, 100);
+		g2.drawString("4. Weekly Hours: "+ ""+ numberOfHoursWorkedPerWeek, 50, 100);
+		g2.drawString("5. Total Hourly Salary: "+ ""+ totHourlySalary, 50, 100);
+		g2.drawString("6. Total Salary: "+ ""+ totalSalary(), 50, 100);
 	}
 
 }

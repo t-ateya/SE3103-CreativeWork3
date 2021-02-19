@@ -41,21 +41,24 @@ public class SalariedEmployee extends Employee {
 		return baseSalary + getBonus();
 	}
 
+	/*
 	@Override
 	public String toString() {
 		return String.format(
-				"Salaried and %s\n" +" "+"base Salary : %.2f\n" + " "+"Bonus $: %.2f\n" + " "+"Total Salary $: %.2f\n",
+				"Salaried and %s\n" +" "+"base Salary : %.2f\n" + " "+"Bonus $: %.2f\n" + " "+"Tot Salary $: %.2f\n",
 				super.toString(), baseSalary, getBonus(), totalSalary());
-	}
+	}*/
 
 	@Override
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 16));
-		int no = 1;
-		for (var e : EmployeeDB.getAllemployees()){
-			g2.drawString(no + ". " + e, 80, no*50+100);
-		}
+	
+		g2.drawString("1. Salaried Employee: "+""+super.toString(), 50, 100);
+		g2.drawString("2. Base Salary:  " +  ""  + baseSalary, 50, 100);
+		g2.drawString("3. Bonus:  " +  ""  + baseSalary, 50, 100);
+		g2.drawString("4. Total Salary:  " +  ""  + totalSalary(), 50, 100);
+
 	}
 
 }

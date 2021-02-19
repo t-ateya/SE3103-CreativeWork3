@@ -50,19 +50,20 @@ public class SalesEmployee extends Employee {
 		return totSalesSalary;
 	}
 
-	public String toString() {
+
+	/*public String toString() {
 		return String.format(
-				"sales employee: %s\n" + "" +  "sales $: %.2f\n" + " "+"commission: %.2f\n" +" "+ "Total Sales Salary $: %.2f\n",
+				"Sales Empl: %s\n" + "" +  "sales $: %.2f\n" + " "+"commission: %.2f\n" +" "+ "Tot Sales Salary $: %.2f\n",
 				super.toString(), sales, commission, totSalesSalary);
-	}
+	}*/
 
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 16));
-		int no = 1;
-		for (var e : EmployeeDB.getAllemployees()){
-			g2.drawString(no + ". " + e, 80, no*50+100);
-		}
+		g2.drawString("1. Sales Employee: " +""+super.toString(), 50, 70);
+		g2.drawString("2. Sales: " + "" +sales, 50, 100);
+		g2.drawString("3. Commission: " + "" +sales, 50, 100);
+		g2.drawString("4. Total Sales Salary: " + "" +totSalesSalary, 50, 100);
 	}
 
 }
