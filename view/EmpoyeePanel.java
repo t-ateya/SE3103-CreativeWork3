@@ -21,8 +21,8 @@ public class EmpoyeePanel {
 	private JButton viewEmpButton = new JButton("View Employee");
 	private JButton prevEmpButton = new JButton("Prev Employee");
 	private JButton exitButton = new JButton("Exit");
-	private JButton addEmpButton = new JButton("Add Employeee");
-	private JButton delEmpButton = new JButton("Delete Employeee");
+	private JButton addEmpButton = new JButton("Display Employee Info");
+	private JButton delEmpButton = new JButton("Delete Employeee Info");
 	private JTextArea addEmpNameArea = new JTextArea();
 	private JTextField addEmpIDField = new JTextField(5);
 	private JScrollPane jpane = new JScrollPane();
@@ -58,6 +58,8 @@ public class EmpoyeePanel {
 		south2.add(prevEmpButton);
 		south2.add(viewEmpButton);
 		south2.add(exitButton);
+		south2.add(addEmpButton);
+		south2.add(delEmpButton);
 		southPanel.add(south2);
 
 		// crate employee canvas
