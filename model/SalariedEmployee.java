@@ -55,10 +55,10 @@ public class SalariedEmployee extends Employee {
 		g2.setFont(new Font("Courier", Font.BOLD, 20));
 	
 		g2.drawString("1. Salaried Employee: "+""+super.toString(), 50, 60);
-		g2.drawString("2. Base Salary:  " +  ""  + baseSalary, 50, 100);
-		g2.drawString("3. Bonus Rate: "+ ""+ BONUS_RATE, 50, 140);
-		g2.drawString("4. Bonus:  " +  ""  + bonus, 50, 180);
-		g2.drawString("5. Total Salary:  " +  ""  + totalSalary(), 50, 220);
+		g2.drawString("2. Base Salary $:  " +  ""  + baseSalary, 50, 100);
+		g2.drawString("3. Bonus Rate: "+ ""+ BONUS_RATE + "%", 50, 140);
+		g2.drawString("4. Bonus $:  " +  ""  + bonus, 50, 180);
+		g2.drawString("5. Total Salary $:  " +  ""  + totalSalary(), 50, 220);
 
 	}
 
