@@ -53,7 +53,7 @@ public class SalariedEmployee extends Employee {
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
 		g2.setFont(new Font("Courier", Font.BOLD, 18));
-	
+
 		g2.drawString("1. Salaried Employee: "+""+super.toString(), 50, 60);
 		g2.drawString(String.format("2. Base Salary $:  %.2f" + "",  baseSalary),  50, 100);
 		g2.drawString("3. Bonus Rate: "+ ""+ BONUS_RATE*100 + " %", 50, 140);
