@@ -22,7 +22,7 @@ public class MenuScreen {
 		menuPanel.setLayout(new GridLayout(2, 1));
 		menuPanel.setPreferredSize(new Dimension(400, 200));
 
-		JButton employeeButton = new JButton("EMPLOYEE VOUCHER");
+		JButton employeeButton = new JButton("EMPLOYEE DATABASE APP");
 		menuPanel.add(employeeButton);
 		cp.add(BorderLayout.CENTER, menuPanel);
 
