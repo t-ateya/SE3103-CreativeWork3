@@ -13,7 +13,7 @@ public class SalesEmployee extends Employee {
 		super(firstName, lastName, id);
 		setSales(sales);
 		setCommission(commission);
-		totSalesSalary = commission * sales;
+		totSalesSalary = (commission * sales);
 
 	}
 

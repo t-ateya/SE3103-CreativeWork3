@@ -57,8 +57,10 @@ public class HourlyEmployee extends SalesEmployee {
 		g2.drawString("2. Hours Worked Per Week: "+ ""+ numberOfHoursWorkedPerWeek + " Hours", 50, 100);
 		g2.drawString("3. Hourly Rate $: "+ ""+ HOURLY_RATE, 50, 140);
 		g2.drawString("4. Total Hourly Salary $: "+ ""+ totHourlySalary, 50, 180);
-		g2.drawString("4. Total Sales Salary $: "+ ""+ super.getTotSalesSalary(), 50, 220);
-		g2.drawString("5. Total Salary $: "+ ""+ totalSalary(), 50, 260);
+		g2.drawString("5. Sales $: "+ ""+ super.getSales(), 50, 100);
+		g2.drawString("6. Commission: "+ ""+ super.getCommission() +" %", 50, 100);
+		g2.drawString("7. Total Sales Salary $: "+ ""+ super.getTotSalesSalary(), 50, 220);
+		g2.drawString("8. Total Salary $: "+ ""+ totalSalary(), 50, 260);
 	}
 
 }
