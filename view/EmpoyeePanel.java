@@ -50,8 +50,8 @@ public class EmpoyeePanel {
 
 		south1.add(new JLabel("ENTER EMLOYEE ID TO DISPLAY INFO: "));
 		south1.add(addEmpIDField);
-		south1.add(new JLabel("INPUT ID TO DELETE EMPLOYEE: "));
-		south1.add(delEmpIDField);
+		//south1.add(new JLabel("INPUT ID TO DELETE EMPLOYEE: "));
+		//south1.add(delEmpIDField);
 		southPanel.add(south1);
 
 		JPanel south2 = new JPanel();
@@ -59,7 +59,7 @@ public class EmpoyeePanel {
 		south2.add(viewEmpButton);
 		south2.add(exitButton);
 		south2.add(addEmpButton);
-		south2.add(delEmpButton);
+		//south2.add(delEmpButton);
 		southPanel.add(south2);
 
 		// crate employee canvas

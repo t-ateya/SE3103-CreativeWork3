@@ -41,13 +41,13 @@ public class SalariedEmployee extends Employee {
 		return baseSalary + getBonus();
 	}
 
-	/*
+	
 	@Override
 	public String toString() {
 		return String.format(
 				"Salaried and %s\n" +" "+"base Salary : %.2f\n" + " "+"Bonus $: %.2f\n" + " "+"Tot Salary $: %.2f\n",
 				super.toString(), baseSalary, getBonus(), totalSalary());
-	}*/
+	}
 
 	@Override
 	public void render(Graphics2D g2) {
@@ -61,5 +61,7 @@ public class SalariedEmployee extends Employee {
 		g2.drawString(String.format("5. Total Salary $:  %.2f" + "",  totalSalary()), 50, 220);
 
 	}
+
+	
 
 }

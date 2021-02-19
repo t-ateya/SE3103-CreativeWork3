@@ -12,8 +12,11 @@ public abstract class Employee {
 		this.id = id;
 	}
 
+	
+
 	public abstract double totalSalary();
 	public abstract void render(Graphics2D g2);
+	
 
 	public String getFirstName() {
 		return firstName;
@@ -37,6 +40,10 @@ public abstract class Employee {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getName(){
+		return firstName +""+ lastName;
 	}
 
 	public String toString() {

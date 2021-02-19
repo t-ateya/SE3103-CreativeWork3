@@ -18,7 +18,7 @@ public class EmployeeCanvas extends JPanel {
 
 	public EmployeeCanvas(EmpoyeePanel panel) {
 		this.setPanel(panel);
-		setPreferredSize(new Dimension(600, 500));
+		setPreferredSize(new Dimension(80, 400));
 		setBackground(Color.BLACK);
 	}
 

@@ -38,7 +38,7 @@ public class HourlyEmployee extends SalesEmployee {
 		return super.totalSalary() + totHourlySalary;
 	}
 
-	/*
+	
 	@Override
 	public String toString() {
 		return String.format(
@@ -46,7 +46,7 @@ public class HourlyEmployee extends SalesEmployee {
 						+" "+ "Hourly Salary $: %.2f\n" + " " + "Tot Salary $: %.2f\n",
 				super.toString(), numberOfHoursWorkedPerWeek, HOURLY_RATE, totHourlySalary, totalSalary());
 	}
-	*/
+	
 
 	@Override
 	public void render(Graphics2D g2) {
@@ -63,4 +63,5 @@ public class HourlyEmployee extends SalesEmployee {
 		g2.drawString(String.format("8. Total Salary $:  %.2f" + "",  totalSalary()), 50, 340);
 	}
 
+	
 }
