@@ -51,14 +51,14 @@ public class HourlyEmployee extends SalesEmployee {
 	@Override
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
-		g2.setFont(new Font("Courier", Font.BOLD, 16));
+		g2.setFont(new Font("Courier", Font.BOLD, 20));
 		
-		g2.drawString("1. Hourly Employee: "+ "" +super.toString(), 50, 100);
+		g2.drawString("1. Hourly Employee: "+ "" +super.toString(), 50, 60);
 		g2.drawString("2. Weekly Hours: "+ ""+ numberOfHoursWorkedPerWeek, 50, 100);
-		g2.drawString("3. Hourly Rate: "+ ""+ HOURLY_RATE, 50, 100);
-		g2.drawString("4. Weekly Hours: "+ ""+ numberOfHoursWorkedPerWeek, 50, 100);
-		g2.drawString("5. Total Hourly Salary: "+ ""+ totHourlySalary, 50, 100);
-		g2.drawString("6. Total Salary: "+ ""+ totalSalary(), 50, 100);
+		g2.drawString("3. Hourly Rate: "+ ""+ HOURLY_RATE, 50, 140);
+		g2.drawString("4. Weekly Hours: "+ ""+ numberOfHoursWorkedPerWeek, 50, 180);
+		g2.drawString("5. Total Hourly Salary: "+ ""+ totHourlySalary, 50, 220);
+		g2.drawString("6. Total Salary: "+ ""+ totalSalary(), 50, 260);
 	}
 
 }

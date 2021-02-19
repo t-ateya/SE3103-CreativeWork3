@@ -57,13 +57,17 @@ public class SalesEmployee extends Employee {
 				super.toString(), sales, commission, totSalesSalary);
 	}*/
 
+	public String toString(){
+		return String.format("Sales Employee: %s", super.toString());
+	}
+
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.red);
-		g2.setFont(new Font("Courier", Font.BOLD, 16));
-		g2.drawString("1. Sales Employee: " +""+super.toString(), 50, 70);
+		g2.setFont(new Font("Courier", Font.BOLD, 20));
+		g2.drawString("1. Sales Employee: " +""+super.toString(), 50, 60);
 		g2.drawString("2. Sales: " + "" +sales, 50, 100);
-		g2.drawString("3. Commission: " + "" +sales, 50, 100);
-		g2.drawString("4. Total Sales Salary: " + "" +totSalesSalary, 50, 100);
+		g2.drawString("3. Commission: " + "" +commission, 50, 120);
+		g2.drawString("4. Total Sales Salary: " + "" +totSalesSalary, 50, 180);
 	}
 
 }
